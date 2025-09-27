@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Code</title>
+</head>
+<body>
+    <h1>Sorting The Array</h1>
+    <label> With out sortig array <p id="with_out_sort"></p></label><br/><br/>
+    <label> With sortig array <p id="with_sort"></p></label><br/><br/>
+    <button onclick="submit1()">Submit</button><br/><br/>
+
+
+    <h2>User Defined Array</h2>
+    <label>Enter the arrays value:-</label><input type="number" placeholder="number" id="user_number"/><br/><br/>
+    <button onclick="submit2()">Submit</button><br/><br/>
+
+    <label>User Defined array is :- <p id="user_value_print"></p></label><br/><br/>
+    <label>User Defined array in Sorted way :- <p id="user_value_print_sorted"></p></label>
+
+    <script>
+        let array=[2,3,1,7,5,8,4]
+       function submit1()
+        {
+                document.getElementById("with_out_sort").innerHTML = array;
+
+                for(let i=0;i<array.length;i++)
+                {
+                        for(let j=0;j<array.length-1;j++)
+                    {
+                            if(array[j]>array[j+1])
+                        {
+                             let temp=0;
+                             temp=array[j];
+                             array[j]=array[j+1];
+                             array[j+1]=temp;
+                        }
+                     }
+                }
+
+                document.getElementById("with_sort").innerHTML = array;
+        }
+
+        let userArray=[]
+        function submit2()
+        {
+            let num = document.getElementById("user_number").value;
+            let user_num=Number(num);
+            userArray.push(user_num);
+
+            document.getElementById("user_value_print").innerHTML = userArray;
+
+            for(let i=0;i<userArray.length;i++)
+                {
+                        for(let j=0;j<userArray.length-1;j++)
+                    {
+                            if(userArray[j]>userArray[j+1])
+                        {
+                             let temp=0;
+                             temp=userArray[j];
+                             userArray[j]=userArray[j+1];
+                             userArray[j+1]=temp;
+                        }
+                     }
+                }
+                document.getElementById("user_value_print_sorted").innerHTML = userArray
+        }
+    </script>
+</body>
+</html>

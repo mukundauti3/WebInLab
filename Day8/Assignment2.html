@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#button").click(function()
+            {
+                let number=$("#input").val();
+                console.log(number);
+
+                let num=Number(number);
+                let a=1;
+
+                for(let i=1;i<=num;i++)
+                {
+                    a=a*i; 
+                }
+
+                console.log(a);
+
+                $("#factorial").html(a);
+            })
+        })
+    </script>
+
+</head>
+<body>
+    <label>Enter the number :- </label><input type="text" id="input"/><br/><br/>
+    <button id="button">Submit</button>
+    <p >The factorial is :- <p id="factorial"></p></p>
+</body>
+</html>

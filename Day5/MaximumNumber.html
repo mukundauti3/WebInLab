@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximum Number in Array</title>
+</head>
+<body>
+
+
+    <h1>The maximum number of array is</h1>
+    <label id="max123"></label>
+
+    <script>
+        let array=[10,20,30,40,60,50];
+    
+        max1(array);
+        function max1(array)
+        {
+            let number=Math.max(...array);
+            console.log(number);
+            document.getElementById("max123").innerText=number;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel</title>
+</head>
+<body>
+
+    <h1>  Tabel  </h1>
+    <input type="text" placeholder="Enter the Number for tabel" id="num"/>
+    <button onclick="tabel()">Show</button><br/>
+    <label id="label"></label>
+
+
+    <script>
+        function tabel()
+        {
+            let number=document.getElementById("num").value;
+            let nmumber2=1;
+            let a=[];
+            let output="<tabel_border=2>";
+            for(let i=1;i<=10;i++)
+                {
+                    number2=number*i;
+                    let str=`<tr><td> ${number} * ${i} = ${number2}<td><tr><br/>`;       
+                    output=output.concat(str);
+                }
+                output=output.concat("</table>")
+                document.getElementById("label").innerHTML=output;
+        }
+
+    </script>
+</body>
+</html>

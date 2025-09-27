@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 7</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script> 
+        $().ready(function (){
+            $("#button1").click(function(){
+                $("#1").slideUp(500);
+            })
+
+            $("#button2").click(function(){
+                $("#1").slideDown(500);
+            })
+
+            $("#button3").click(function(){
+                $("#1").slideToggle(500);
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>Hello</h1>
+    <div id="1" style="width: 70px; height: 60px; background-color: pink;"></div>
+    <br/><br/>
+    <button id="button1">SlidingUp</button><br/><br/>
+    <button id="button2">SlidingDown</button><br/><br/>
+    <button id="button3">SlidingToggle</button><br/><br/>
+</body>
+</html>

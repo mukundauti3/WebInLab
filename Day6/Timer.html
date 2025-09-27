@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+</head>
+<body>
+    <label id="hour"></label><label id="min"></label><label id="sec"></label>
+    <script>
+        setInterval(timex,1000);
+        function timex()
+        {
+            let time=new Date();
+
+            document.getElementById("hour").innerText= time.getHours() + " : "+ time.getMinutes() + " : " + time.getSeconds();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Load Posts with Promise</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .post {
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .post h3 {
+      margin: 0 0 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Posts from JSONPlaceholder</h1>
+  <div id="posts-container">Loading posts...</div>
+
+  <script>
+    function loadPosts() {
+      return new Promise((resolve, reject) => {
+        fetch('https://jsonplaceholder.typicode.com/posts')
+          .then(response => {
+            if (!response.ok) {
+              reject(`HTTP error! Status: ${response.status}`);
+            } else {
+              return response.json();
+            }
+          })
+          .then(data => resolve(data))
+          .catch(error => reject(error));
+      });
+    }
+
+    function displayPosts(posts) {
+      const container = document.getElementById('posts-container');
+      container.innerHTML = ''; // Clear loading text
+
+      posts.forEach(post => {
+        const postDiv = document.createElement('div');
+        postDiv.className = 'post';
+        postDiv.innerHTML = `<h3>${post.title}</h3><p>${post.body}</p>`;
+        container.appendChild(postDiv);
+      });
+    }
+
+    // Load and display posts
+    loadPosts()
+      .then(data => displayPosts(data))
+      .catch(error => {
+        document.getElementById('posts-container').innerText = `Error: ${error}`;
+      });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Call Back</title>
+</head>
+<body>
+    <h1>Browser CallBack Function</h1>
+    <h2 id="count">0</h2>
+    <p> This function use the setInterval and increment value of count</p>
+    <script>
+        let count=0;
+        let intervalID = setInterval(increment,1500);
+        function increment()
+        {
+            count++;
+            document.getElementById("count").innerText=count;
+            
+        }
+        
+        setTimeout(()=>{
+            clearInterval(intervalID);
+            
+        },7500);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $().ready(function (){
+            $("#button1").click(function(){
+                $("#p1").css("font-style","italic")
+            })
+
+            $("#button2").click(function(){
+                $("#p2").css("text-decoration","underline","color","red")
+            })
+        })
+    </script>
+</head>
+<body>
+    <p id="p1">This is the first paragraph</p><br/><br/><br/>
+    <button id="button1">Italic</button><br/><br/>
+    <p id="p2">This is the second paragraph</p><br/><br/><br/>
+    <button id="button2">UnderLine</button><br/><br/>
+
+</body>
+</html>

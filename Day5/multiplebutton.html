@@ -1,0 +1,71 @@
+<html>
+    <head></head>
+<body>
+<input type="text" placeholder="Enter values" id="inputBox"/><br/> 
+<label id="labelShow"></label><br/>
+
+
+<!-- <button onclick="show()">Add First</button><br/> -->
+<button onclick="addFirst()">Add First</button>
+<button onclick="addLast()">Add Last</button>
+<button onclick="oddNumber()">Odd</button>
+<button onclick="evenNumber()">Even</button>
+<script>
+
+    let array1 = [];
+
+    // function show() {
+    //     let output = "";
+    //     for (let i = 0; i < array1.length; i++) {
+    //         output += array1[i] + " ";
+    //     }
+    //     document.getElementById("labelShow").innerHTML = output.trim();
+    // }
+
+    function addFirst()
+    {
+        let number=document.getElementById("inputBox").value;
+        array1.unshift(number);
+        console.log(array1);
+        document.getElementById("labelShow").innerHTML=array1.join(" ");
+    }
+
+    function addLast()
+    {
+        let number=document.getElementById("inputBox").value;
+        array1.push(number);
+        console.log(array1);
+        document.getElementById("labelShow").innerHTML=array1.join(" ");
+    }
+
+    function oddNumber()
+    {
+        for(let i=0;i<array1.length;i++)
+        {
+            let number=document.getElementById("inputBox").value;
+            if(number%2!=0)
+            {
+                
+                document.getElementById("labelShow").innerText=number;
+            }
+        }
+    }
+
+    function evenNumber()
+    {
+        for(let i=0;i<array1.length;i++)
+        {
+            let number=document.getElementById("inputBox").value;
+            if(number%2==0)
+            {
+                
+                document.getElementById("labelShow").innerText=number;
+            }
+        }
+    }
+</script>
+
+
+</body>
+
+</html>

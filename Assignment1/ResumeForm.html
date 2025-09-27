@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-snap-type: y mandatory; font-family: Arial, sans-serif;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Form</title>
+</head>
+
+<body style="text-align: center; background-color: #f0f8ff; margin: 0; padding: 20px;">
+    <h1 style="color: #333; font-size: 2.5em; margin-bottom: 10px;">Resume Form</h1>
+
+    <ul style="list-style-type: none; margin: 0; padding: 0; display: flex; justify-content: center; gap: 20px;">
+        <li><a href="#HOME" style="text-decoration: none; color: #0077cc; font-weight: bold;">Home</a></li>
+        <li><a href="#PERSONAL" style="text-decoration: none; color: #0077cc; font-weight: bold;">Personal Info</a></li>
+        <li><a href="#education" style="text-decoration: none; color: #0077cc; font-weight: bold;">Education</a></li>
+        <li><a href="#Experience" style="text-decoration: none; color: #0077cc; font-weight: bold;">Experience</a></li>
+    </ul>
+
+    <hr style="margin: 20px 0; border: 1px solid #ccc;" />
+
+    <form method="post" style="max-width: 600px; margin: auto; text-align: left;adding: 20px; border-radius: 10px;">
+
+        <h3 id="PERSONAL" style="color: #444;">Personal Information</h3>
+        <label for="FName">Full Name:</label><br />
+        <input type="text" maxlength="30" placeholder="Name" id="FName"
+            style="width: 100%; padding: 8px; margin-bottom: 10px;" /><br />
+
+        <label for="2">Address:</label><br />
+        <textarea id="2" maxlength="40" placeholder="Home Address"
+            style="width: 100%; padding: 8px; margin-bottom: 10px;"></textarea><br />
+
+        <label for="3">Pincode:</label><br />
+        <input type="number" id="3" maxlength="10" placeholder="Pincode"
+            style="width: 100%; padding: 8px; margin-bottom: 10px;" /><br />
+
+        <label for="6">Phone Number:</label><br />
+        <input type="number" id="6" maxlength="12" placeholder="Phone Number"
+            style="width: 100%; padding: 8px; margin-bottom: 10px;" /><br />
+
+        <label for="10">Email Address:</label><br />
+        <input type="email" id="10" maxlength="12" placeholder="Email"
+            style="width: 100%; padding: 8px; margin-bottom: 10px;" /><br />
+
+        <label>Gender:</label><br />
+        <input type="radio" name="gender" /> Male
+        <input type="radio" name="gender" /> Female
+
+        <hr style="margin: 20px 0; border: 1px solid #ccc;" />
+
+        <h4 id="education" style="color: #444;">Education Information</h4>
+        <label for="Edu">Education:</label><br />
+        <input id="Edu" type="text" maxlength="20" placeholder="Education"
+            style="width: 100%; padding: 8px; margin-bottom: 10px;" /><br />
+
+        <label for="1">College Name:</label><br />
+        <input type="text" id="1" maxlength="20" placeholder="College Name"
+            style="width: 100%; padding: 8px; margin-bottom: 10px;" /><br />
+
+        <label for="4">College Address:</label><br />
+        <textarea id="4" maxlength="40" placeholder="College Address"
+            style="width: 100%; padding: 8px; margin-bottom: 10px;"></textarea><br />
+
+        <label for="5">College Pincode:</label><br />
+        <input type="number" id="5" maxlength="10" placeholder="College Pincode"
+            style="width: 100%; padding: 8px; margin-bottom: 10px;" /><br />
+
+        <label for="7">10th Marks:</label><br />
+        <input type="number" id="7" maxlength="5" placeholder="10th marks"
+            style="width: 100%; padding: 8px; margin-bottom: 10px;" /><br />
+
+        <label for="8">12th Marks:</label><br />
+        <input type="number" id="8" maxlength="5" placeholder="12th marks"
+            style="width: 100%; padding: 8px; margin-bottom: 10px;" /><br />
+
+        <label for="9">Graduation Marks:</label><br />
+        <input id="9" type="number" maxlength="5" placeholder="Graduation marks"
+            style="width: 100%; padding: 8px; margin-bottom: 10px;" /><br />
+
+        <hr style="margin: 20px 0; border: 1px solid #ccc;" />
+
+        <h4 id="Experience" style="color: #444;">Experience</h4>
+        <label for="Experience">Work Experience:</label><br />
+        <textarea id="Experience" style="width: 100%; padding: 8px; margin-bottom: 20px;"></textarea><br />
+
+        <input type="submit"
+            style="padding: 10px 20px; background-color: #0077cc; color: white; border: none; border-radius: 5px; cursor: pointer;" />
+        <input type="reset"
+            style="padding: 10px 20px; background-color: #ccc; color: black; border: none; border-radius: 5px; cursor: pointer;" />
+    </form>
+
+    
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee</title>
+</head>
+<body>
+    <h1>Enter the Employee Data</h1>
+  
+        <label for="Emp_Fname">Enter the Employee First Name :- </label>
+        <input type="text" id="Fname" placeholder="Employee First Name"/>
+        <br/>
+        <br/>
+        <label for="Emp_Lname">Enter the Employee Last Name :- </label>
+        <input type="text" id="Lname" placeholder="Employee Last Name"/>
+        <br/>
+        <br/>
+        <label for="Emp_Email">Enter the Employee Email :- </label>
+        <input type="email" id="email" placeholder="Employee Email"/>
+        <br/>
+        <br/>
+        <label for="Emp_Date_Of_Birth">Enter the Employee Date of Birth :- </label>
+        <input type="date" id="DateOfBirth" placeholder="Employee Date Of Birth"/>
+        <br/>
+        <br/>
+
+        <input type="submit" onclick="validate()"/>
+        <input type="reset"/>
+
+        <br/><br/>
+
+        <div id="Show1"></div>
+   
+    <script>
+        function validate()
+        {
+            
+            let fname=document.getElementById("Fname").value;
+            let lname=document.getElementById("Lname").value;
+            let email=document.getElementById("email").value;
+            let birth=document.getElementById("DateOfBirth").value;
+           
+            let email_validation = /[a-zA-Z0-9-_]+@[a-zA_Z]+\.[a-zA-Z]{2,3}$/;
+            console.log(email.match(email_validation));
+            if(email.match(email_validation))
+            {
+
+                console.log("Hello")
+
+                let output=`<table>`;
+                    data=[{
+                        Fname : fname,
+                        Lname : lname,
+                        Email : email,
+                        Birth_Date : birth
+                    }]
+                    
+                for(let i=0;i<data.length;i++)
+                {
+                    let str=`<tr><td> ${data[i].Fname}</td> <td> ${data[i].Lname}</td> <td> ${data[i].Email}</td><td> ${data[i].Birth_Date}</td>`;
+                        output=output.concat(str);
+                }
+
+                output=output.concat(`</table>`);
+                document.getElementById("Show1").innerHTML=output;
+
+            fname=document.getElementById("Fname").value = "";
+            lname=document.getElementById("Lname").value = "";
+            email=document.getElementById("email").value = "";
+            birth=document.getElementById("DateOfBirth").value = "";
+            }
+        }
+    </script>
+</body>
+</html>

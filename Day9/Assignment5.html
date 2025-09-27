@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+</head>
+<body>
+
+    <input type="number" id="i1" placeholder="Number 1"/><br/><br/>
+    <input type="number" id="i2" placeholder="Number 2"/><br/><br/>
+    <button onclick="Submit1()">Submit</button><br/><br/>
+    <label id="show"></label>
+    <script>
+       function Submit1(){
+        let a=document.getElementById("i1").value;
+        let b=document.getElementById("i2").value;
+        try{
+            if(b==0)
+            throw new Error("Division is not allowed")
+        const result= a/b
+        console.log(`Result=${result}`)
+        document.getElementById("show").innerHTML=result;
+        }
+        catch(error){
+            console.log(`Error:${error.msg}`)
+            document.getElementById("show").innerHTML=error;
+        }
+        finally{
+            console.log("operation is complete")
+        }
+
+
+       }
+
+    
+    </script>
+</body>
+</html>

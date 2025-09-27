@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count</title>
+</head>
+<body>
+    <p> This is show how many time Button is click <label id="show">Hello</label></p>
+
+    <Button onclick="click1()" id="button">click</Button>
+
+   <script>
+    let count=0;
+    function click1()
+    {
+        
+        count++;
+        if(count>=10)
+        {
+            document.getElementById("button").disabled = true;
+        }
+        else{
+            document.getElementById("show").innerText=count;
+        }
+    }
+
+   </script>
+    
+</body>
+</html>

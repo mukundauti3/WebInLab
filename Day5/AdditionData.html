@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Additional Data</title>
+</head>
+<body>
+
+    <h1>Hello</h1>
+
+    <h2>The sum is :- </h2>
+    <label id="label"></label>
+
+    <h3>To get sum Click here</h3>
+    <button id="button" onclick="calculate2(...a)">Click</button>
+    <label id="label2"></label>
+
+     <h4>The Odd numbers are</h4>
+    <label id="label3"></label>
+    <script>
+        let a=[3,4,67,88,2];
+        let odd=[];
+        let sum=0,sum2=0;
+        function calculate(...nums)
+        {
+            for(let i=0;i<a.length;i++)
+            {
+            
+            sum=a[i]+sum;
+            //console.log(a[i]);
+            }
+            console.log(sum);
+           document.getElementById("label").innerText=sum;
+        }
+
+        function calculate2(...nums)
+        {
+            for(let i=0;i<a.length;i++)
+        {
+            sum2=a[i]+sum2;
+                if(a[i]%2!=0)
+                {
+                    odd[i]=a[i];
+                    
+                }
+                // if(odd[i]==false) 
+                // {
+                //     odd.trim
+                // }
+        }
+
+        document.getElementById("label2").innerText=sum2;
+        document.getElementById("label3").innerText=odd;
+
+        }
+
+        function calculate(aa,bb)
+        {
+            console.log(aa+bb);
+        }
+        function calculate(aa,bb,cc)
+        {
+            console.log(aa+bb+cc);
+        }
+         
+        calculate(a);
+
+        //this will get overloading but which is writen at last will execute only not both
+        calculate(10,20);
+        calculate(10,20,30);
+    </script>    
+</body>
+</html>

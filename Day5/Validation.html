@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+</head>
+<body>
+
+    <h1>Form Validation</h1>
+
+    <form method="get">
+    <label>Enter the Name:-</label>
+    <input type="text" id="userName" placeholder="User Name" maxlength="20"/><br/><br/>
+
+    <label>Enter the Age:-</label>
+    <input type="number" id="userAge" placeholder="Age" maxlength="20"/><br/><br/>
+
+    <input type="button" onclick="submit1()" name="submit"/>
+
+    <input type="reset" value="reset">
+
+     </form>
+    <script>
+        function submit1() {
+    let name = document.getElementById("userName").value;
+    console.log(name);
+    let age = document.getElementById("userAge").value;
+    console.log(age);
+    if(name==null || name=="" && age==null || age=="")
+    {
+        console.log("Error");
+    }
+    
+}
+
+    </script>
+</body>
+</html>

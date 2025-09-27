@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Line Inputs</title>
+</head>
+
+
+<body>
+    <h1>Enter the multiple line input</h1><br/><br/>
+
+   <label>Enter the some text :- </label> <textarea  id="TextArea" placeholder="Enter the text"></textarea><br/><br/>
+   <input type="number" placeholder="Enter the number of rows" id="number"/><br/><br/>
+   <button onclick="submit1()">Submit</button>
+
+
+   <script>
+
+            function submit1()
+         {
+            let num=document.getElementById("number").value;
+            let number=Number(num);
+
+            let text=document.getElementById("TextArea").value;
+            let divide=number;
+            console.log(text);
+
+
+            let l = text.length;
+            console.log(l);
+            let a = 0;
+            let c = l / 4;
+            
+
+
+            for(let i=0;i<number;i++)
+           {
+              let extra_para = document.createElement("p");
+              let d = text.slice(a, c);
+              extra_para.innerText=d;
+              a=c;
+              
+              document.body.appendChild(extra_para);
+           }
+    }
+
+   </script>
+
+
+</body>
+
+
+</html>
